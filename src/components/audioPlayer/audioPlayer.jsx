@@ -127,8 +127,9 @@ export function AudioPlayer({ isLoading, currentTrack }) {
                   )}
                 </S.TrackPlayAlbum>
               </S.PlayerContain>
-
+                
               <S.TrackPlayLikeDis>
+                {/* Сюда бы добавить рабочий лайк / дизлайк */}
                 <S.TrackPlayLike className="_btn-icon">
                   <S.TrackPlayLikeSvg alt="like">
                     <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
