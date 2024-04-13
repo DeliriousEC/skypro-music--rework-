@@ -32,6 +32,7 @@ export function AudioPlayer({ isLoading, currentTrack }) {
   const [repeatTrack, setRepeatTrack] = useState(false)
 
   const audioRef = useRef(null)
+
   const handleStartStop = () => {
     if (isPlaying) {
       audioRef.current.pause()

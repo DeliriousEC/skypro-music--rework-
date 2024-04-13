@@ -32,7 +32,7 @@ export const Burger = () => {
               </S.MenuItem>
             </Link>
             <Link>
-              <S.MenuItem >
+              <S.MenuItem onClick={handleLogout} >
                 <S.MenuLink href="../Auth">Выйти</S.MenuLink>
               </S.MenuItem>
             </Link>
