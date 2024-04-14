@@ -23,19 +23,19 @@ export const Burger = () => {
           <S.MenuList>
             <Link to="/">
               <S.MenuItem>
-                <S.MenuLink href="/">Главное</S.MenuLink>
+                <S.MenuLink>Главное</S.MenuLink>
               </S.MenuItem>
             </Link>
             <Link to="/favorites">
               <S.MenuItem>
-                <S.MenuLink href="/favorites">Мой плейлист</S.MenuLink>
+                <S.MenuLink>Мой плейлист</S.MenuLink>
               </S.MenuItem>
             </Link>
-            <Link>
+            {/* <Link> */}
               <S.MenuItem onClick={handleLogout} >
-                <S.MenuLink href="../Auth">Выйти</S.MenuLink>
+                <S.MenuLink>Выйти</S.MenuLink>
               </S.MenuItem>
-            </Link>
+            {/* </Link> */}
           </S.MenuList>
         </S.NavMenu>
       )}
