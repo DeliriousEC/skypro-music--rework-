@@ -32,8 +32,9 @@ export function AudioPlayer({ isLoading, currentTrack }) {
   const [repeatTrack, setRepeatTrack] = useState(false)
 
   const audioRef = useRef(null)
-  const handleStartStop = () => {
-    if (isPlaying) {
+
+  const handleStartStop = (isPlaying) => {
+    if (!isPlaying) {
       audioRef.current.pause()
       dispatch(setIsPlaying(false))
     } else {
@@ -43,7 +44,7 @@ export function AudioPlayer({ isLoading, currentTrack }) {
   }
 
   useEffect(() => {
-    handleStartStop()
+    handleStartStop(true)
     audioRef.current.onended = () => {
       if (indexCurrentTrack < arrayTracksAll.length - 1) {
         dispatch(
@@ -127,8 +128,9 @@ export function AudioPlayer({ isLoading, currentTrack }) {
                   )}
                 </S.TrackPlayAlbum>
               </S.PlayerContain>
-
+                
               <S.TrackPlayLikeDis>
+                {/* Сюда бы добавить рабочий лайк / дизлайк */}
                 <S.TrackPlayLike className="_btn-icon">
                   <S.TrackPlayLikeSvg alt="like">
                     <use xlinkHref="img/icon/sprite.svg#icon-like"></use>

@@ -30,7 +30,6 @@ export function Track({ isLoading, track, isFavorites = false }) {
   const [isLiked, setIsLiked] = useState(isUserLike);
 
 
-
   useEffect(() => {
     if (isFavorites) {
       setIsLiked(isFavorites);
