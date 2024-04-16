@@ -33,8 +33,8 @@ export function AudioPlayer({ isLoading, currentTrack }) {
 
   const audioRef = useRef(null)
 
-  const handleStartStop = () => {
-    if (isPlaying) {
+  const handleStartStop = (isPlaying) => {
+    if (!isPlaying) {
       audioRef.current.pause()
       dispatch(setIsPlaying(false))
     } else {
@@ -44,7 +44,7 @@ export function AudioPlayer({ isLoading, currentTrack }) {
   }
 
   useEffect(() => {
-    handleStartStop()
+    handleStartStop(true)
     audioRef.current.onended = () => {
       if (indexCurrentTrack < arrayTracksAll.length - 1) {
         dispatch(
