@@ -53,7 +53,7 @@ const Button = styled.button`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-
+cursor: pointer;
   width: 278px;
   height: 52px;
   border-radius: 6px;
@@ -99,6 +99,7 @@ export const Buttons = styled.div`
   gap: 20px;
   margin-top: 60px;
   width: 100%;
+  cursor: pointer;
 `
 
 export const Inputs = styled.div`
@@ -121,6 +122,7 @@ export const ButtonTwo = styled(Button)`
   color: #000000;
   background-color: transparent;
   border: 1px solid #d0cece;
+
 
   &:hover {
     background-color: #f4f5f6;

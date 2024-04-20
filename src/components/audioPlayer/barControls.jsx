@@ -82,7 +82,9 @@ export default function BarControls({
       />
       <BarControlsItem
         alt={isPlaying ? 'pause' : 'play'}
-        click={handleStartStop}
+        click= {()=>
+        isPlaying ? handleStartStop(false) : handleStartStop(true)
+        }
       />
       <BarControlsItem
         alt="next"

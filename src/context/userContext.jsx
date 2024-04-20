@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { createContext } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { setAuth } from '../store/slices/AuthorizationSlice'
+import { clearAuth } from '../store/slices/AuthorizationSlice'
 
 export const UserContext = createContext(null)
 
@@ -13,8 +13,10 @@ export const useUserContext = () => {
 
 export const UserProvider = ({ children }) => {
   const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const handleLogout = () => {
+    dispatch(clearAuth())
     localStorage.removeItem('auth')
     navigate('/Auth')
   }

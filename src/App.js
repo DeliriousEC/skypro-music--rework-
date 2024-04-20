@@ -5,13 +5,15 @@ import { store } from '../src/store/indexStore'
 
 function App() {
   return (
-    <UserProvider>
+    
       <Provider store={store}>
+        <UserProvider>
         <div className="App">
           <AppRoutes />
         </div>
+            </UserProvider>
       </Provider>
-    </UserProvider>
+
   )
 }
 
